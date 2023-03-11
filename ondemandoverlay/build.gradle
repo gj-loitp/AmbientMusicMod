@@ -32,26 +32,26 @@ android {
     }
 
     signingConfigs {
-        release {
-            def keystore = getKeystoreProperties()
-            if (keystore != null) {
-                storeFile file(keystore.getProperty("storeFile"))
-                storePassword keystore.getProperty("storePassword")
-                keyAlias keystore.getProperty("keyAlias")
-                keyPassword keystore.getProperty("keyPassword")
-            }
-        }
+//        release {
+//            def keystore = getKeystoreProperties()
+//            if (keystore != null) {
+//                storeFile file(keystore.getProperty("storeFile"))
+//                storePassword keystore.getProperty("storePassword")
+//                keyAlias keystore.getProperty("keyAlias")
+//                keyPassword keystore.getProperty("keyPassword")
+//            }
+//        }
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            signingConfig signingConfigs.release
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildOutputs.all {
-                outputFileName = "OnDemandOverlay.apk"
-            }
-        }
+//        release {
+//            minifyEnabled false
+//            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            buildOutputs.all {
+//                outputFileName = "OnDemandOverlay.apk"
+//            }
+//        }
     }
 
     compileOptions {
